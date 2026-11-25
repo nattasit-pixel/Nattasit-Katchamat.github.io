@@ -1,0 +1,106 @@
+:root { --ink: #183b3b; --accent: #825033; --line: #d6ded7; }
+body { background: #fbfaf6; color: var(--ink); font-size: 1.08rem; }
+
+
+.navbar {
+  background-color: #FBBF7C;
+  background-image:
+    linear-gradient(
+      to right,
+      transparent 65%,
+      #C5785A 100%
+    ),
+    url("images/banner.png");
+  background-position: 2rem center;
+  background-size: auto 130%;
+  background-repeat: no-repeat;
+  border-bottom: 0.5px solid var(--line);
+}
+
+.navbar .navbar-nav .nav-link,
+.navbar .navbar-nav .nav-link.active {
+  color: Navy;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  text-decoration: underline;
+}
+
+main.content { max-width: 50rem; width: 100%; margin-inline: auto; }
+.profile { display: grid; grid-template-columns: minmax(9rem, 31%) 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; padding: 2.4rem 0 1.6rem; }
+.portrait img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: .35rem; }
+.portrait p, .portrait figure { margin: 0; }
+h1, h2, h3 { font-family: Georgia, serif; color: var(--ink); }
+.intro h1 { font-size: clamp(2.6rem, 5vw, 4.2rem); line-height: 1.02; margin: 0 0 1rem; }
+.role { color: var(--accent); font-weight: 600; }
+/* Section banners for headings written with ## */
+main.content h2 {
+  background-color: #FAEDCB;
+  color: #183B3B;
+  border-bottom: 0;
+  border-left: 5px solid #174C4F;
+  border-radius: 0 6px 6px 0;
+  padding: 0.55rem 1rem;
+  margin: 2rem 0 1rem;
+}
+
+h3 { font-size: 1.35rem; }
+a { color: #21645d; text-underline-offset: .18em; }
+[id] { scroll-margin-top: 5rem; }
+@media (max-width: 640px) {
+  .profile { grid-template-columns: 1fr; padding-top: 1rem; gap: 1.3rem; }
+  .portrait { width: 9rem; }
+}
+
+
+
+ /* Paragraphs, lists, and navigation links */
+body,
+.navbar {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Your name, page titles, and section headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.profile .intro h1 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+.profile .intro p {
+  margin: 0 0 0.75rem;
+  line-height: 1.5;
+}
+
+.affiliation {
+  color: #825033;
+}
+
+.contact {
+  color: #825033;
+}
+
+
+
+.intro p + p:has(.role) {
+  margin-top: 0.5rem;
+}
+
+.intro h2 + p + p {
+  margin-top: 1.5rem;
+}
+
+
+
+.intro h1.welcome-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+
